@@ -1,0 +1,25 @@
+<h1>Item Details</h1>
+<p>
+	<strong>Item Name: </strong>
+	<%= @item.title %>
+</p>
+<p>
+	<strong>Item Code: </strong>
+	<%= @item.text1 %>
+</p>
+<p>
+	<strong>Restaurant Name: </strong>
+	<%= @item.text2 %>
+</p>
+<p>
+	<strong>Price: </strong>
+	<%= @item.text3 %>
+</p>
+<br>
+<%= render @item.orders %>
+<br><h2> Enter your details to Order</h2>
+<%= render 'orders/form' %>
+
+
+<%= link_to 'Back', items_path %>
+

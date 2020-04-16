@@ -1,0 +1,17 @@
+<%= form_with(model: [ @item, @item.orders.build ],cope: :order,local: true) do |form| %>
+  <p>
+    <%= form.label :customer_name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :address %><br>
+    <%= form.text_area :address %>
+  </p>
+  <p>
+    <%= form.label :contact_number %><br>
+    <%= form.text_area :number %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

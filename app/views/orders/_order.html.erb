@@ -1,0 +1,18 @@
+ <p>
+    <strong>Customer name:</strong>
+    <%= order.name %>
+  </p>
+ 
+  <p>
+    <strong>Address:</strong>
+    <%= order.address %>
+  </p>
+  <p>
+    <strong>Contact Number:</strong>
+    <%= order.number %>
+  </p>
+<p>
+  <%= link_to 'Delete Order', [order.item, order],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

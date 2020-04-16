@@ -1,0 +1,29 @@
+<h1><center>Welcome to NITC's Online Food Ordering System</center></h1>
+<br>
+<center>
+
+<h1>Items Available</h1>
+
+<table>
+  <tr>
+    <th>Item Name</th>
+    <th>Item Code</th>
+    <th>Restaurant Name</th>
+    <th>Price</th>
+    <th></th>
+  </tr>
+ 
+  <% @items.each do |item| %>
+    <tr>
+      <td><%= item.title %></td>
+      <td><%= item.text1 %></td>
+      <td><%= item.text2 %></td>
+      <td><%= item.text3 %></td>
+      <td><%= link_to 'Purchase', item_path(item) %></td>
+    </tr>
+  <% end %>
+</table>
+<br><br><br>
+<%= link_to 'ADMIN LOGIN', del_index_path %>
+</center>
+

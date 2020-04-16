@@ -1,0 +1,35 @@
+<h1><center>Administrator Portal</center></h1>
+<br>
+<center>
+
+<h1>Items Listed</h1>
+
+<table>
+  <tr>
+    <th>Item Name</th>
+    <th>Item Code</th>
+    <th>Restaurant Name</th>
+    <th>Price</th>
+    <th>Operations</th>
+  </tr>
+ 
+  <% @items.each do |item| %>
+    <tr>
+      <td><%= item.title %></td>
+      <td><%= item.text1 %></td>
+      <td><%= item.text2 %></td>
+      <td><%= item.text3 %></td>
+      <td><%= link_to 'Update', edit_item_path(item) %></td>
+	<td><%= link_to 'Delete ', item_path(item),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+	<td><%= link_to '  View Orders', item_orders_path(item) %></td>
+    </tr>
+  <% end %>
+</table>
+<br><br>
+<%= link_to 'Add a new item', new_item_path %>
+<br><br><br>
+<%= link_to 'Back', items_path %>
+
+</center>
